@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ama Anusthan</title>
+
+<style>
+body {font-family: Arial; margin:0; background:#f4f6f9;}
+
+header {
+  background:#2c5364;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+
+.accordion {
+  background:#1c2b39;
+  color:white;
+  cursor:pointer;
+  padding:15px;
+  width:100%;
+  border:none;
+  text-align:left;
+  font-size:18px;
+}
+
+.panel {
+  display:none;
+  padding:15px;
+  background:white;
+}
+
+/* Gallery Grid */
+.gallery {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap:10px;
+}
+
+.gallery img {
+  width:100%;
+  border-radius:10px;
+}
+
+/* WhatsApp Button */
+.whatsapp {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:green;
+  color:white;
+  padding:15px;
+  border-radius:50%;
+  text-decoration:none;
+  font-size:20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Ama Anusthan</h1>
+  <p>A Center of Learning</p>
+</header>
+
+<!-- ABOUT -->
+<button class="accordion">📖 About Us</button>
+<div class="panel">
+  <p><b>Ama Anusthan</b> is a coaching center dedicated to providing quality education in rural areas.</p>
+  <p>We focus on strong fundamentals, discipline, and student success.</p>
+  <p>Our mission is to help every student achieve academic excellence.</p>
+</div>
+
+<!-- COURSES -->
+<button class="accordion">📚 Courses</button>
+<div class="panel">
+  <p><b>School Coaching:</b></p>
+  <ul>
+    <li>CBSE Class 1 to 10 (All Subjects)</li>
+    <li>HSE Class 1 to 10 (All Subjects)</li>
+  </ul>
+
+  <p><b>Computer Courses:</b></p>
+  <ul>
+    <li>DCA (Diploma in Computer Application)</li>
+    <li>PGDCA</li>
+  </ul>
+
+  <p><b>Other Programs:</b></p>
+  <ul>
+    <li>Spoken English (All Age Groups)</li>
+  </ul>
+</div>
+
+<!-- GALLERY -->
+<button class="accordion">📸 Gallery</button>
+<div class="panel">
+  <div class="gallery">
+    <img src="img1.jpg">
+    <img src="img2.jpg">
+    <img src="img3.jpg">
+    <img src="img4.jpg">
+    <img src="img5.jpg">
+    <img src="img6.jpg">
+    <img src="img7.jpg">
+    <img src="img8.jpg">
+    <img src="img9.jpg">
+    <img src="img10.jpg">
+  </div>
+</div>
+
+<!-- ADMISSION -->
+<button class="accordion">📝 Admission</button>
+<div class="panel">
+  <p>Fill the form for admission:</p>
+  <iframe src="https://docs.google.com/forms/d/e/YOUR_FORM_LINK/viewform"
+          width="100%" height="500"></iframe>
+</div>
+
+<!-- CONTACT -->
+<button class="accordion">📞 Contact</button>
+<div class="panel">
+  <p>📍 Jagatsinghpur</p>
+  <p>📞 7873754239</p>
+  <p>WhatsApp: 7787821489</p>
+</div>
+
+<!-- WhatsApp -->
+<a class="whatsapp" 
+href="https://wa.me/917787821489?text=Hello%20Sir,%20I%20want%20admission%20in%20Ama%20Anusthan" 
+target="_blank">💬</a>
+
+<script>
+let acc = document.getElementsByClassName("accordion");
+
+for (let i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    let panel = this.nextElementSibling;
+
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  }
+}
+</script>
+
+</body>
+</html>
