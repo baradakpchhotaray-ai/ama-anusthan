@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ama Anusthan</title>
+<title>Ama Anusthan - A Center of Learning</title>
 
 <style>
 body {
@@ -12,47 +12,78 @@ body {
   background: #f4f6f9;
 }
 
+/* HEADER */
 header {
-  background: #2c3e50;
+  background: linear-gradient(45deg, #1c2b39, #2c3e50);
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 30px 10px;
 }
 
+/* NAVBAR */
+nav {
+  background: #34495e;
+  display: flex;
+  justify-content: center;
+}
+nav a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+nav a:hover {
+  background: #1abc9c;
+}
+
+/* SECTIONS */
 section {
   padding: 20px;
 }
 
-h2 {
-  background: #2c3e50;
+/* HERO */
+.hero {
+  background: #1abc9c;
   color: white;
-  padding: 10px;
-  border-radius: 5px;
+  text-align: center;
+  padding: 40px 20px;
 }
 
-ul {
-  line-height: 1.8;
+/* CARDS */
+.card {
+  background: white;
+  margin: 15px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* Gallery Grid */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;
-}
-
+/* GALLERY */
 .gallery img {
   width: 100%;
-  height: 150px;
-  object-fit: cover;
+  max-width: 250px;
+  margin: 10px;
   border-radius: 10px;
 }
 
+/* FOOTER */
 footer {
   background: #2c3e50;
   color: white;
   text-align: center;
-  padding: 10px;
+  padding: 15px;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: green;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  text-decoration: none;
 }
 </style>
 </head>
@@ -60,63 +91,69 @@ footer {
 <body>
 
 <header>
-<h1>AMA ANUSTHAN</h1>
-<p>A Center of Learning</p>
+  <h1>AMA ANUSTHAN</h1>
+  <p>A Center of Learning</p>
 </header>
 
-<section>
-<h2>About Us</h2>
-<p>Ama Anusthan is a coaching center dedicated to providing quality education in rural areas. We focus on strong fundamentals, discipline, and student success.</p>
-<p>Our mission is to help every student achieve academic excellence.</p>
-</section>
+<nav>
+  <a href="#about">About</a>
+  <a href="#courses">Courses</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-<section>
-<h2>Courses</h2>
-
-<b>School Coaching:</b>
-<ul>
-<li>CBSE Class 1 to 10 (All Subjects)</li>
-<li>HSE Class 1 to 10 (All Subjects)</li>
-</ul>
-
-<b>Computer Courses:</b>
-<ul>
-<li>DCA (Diploma in Computer Application)</li>
-<li>PGDCA</li>
-</ul>
-
-<b>Other Programs:</b>
-<ul>
-<li>Spoken English (All Age Groups)</li>
-</ul>
-
-</section>
-
-<section>
-<h2>Gallery</h2>
-<div class="gallery">
-<img src="IMG-20250325-WA0018.jpg">
-<img src="IMG-20250518-WA0001.jpg">
-<img src="IMG-20250531-WA0002.jpg">
-<img src="IMG-20250826-WA0002.jpg">
-<img src="IMG_20250517_171410.jpg">
-<img src="IMG_20250609_082642.jpg">
-<img src="IMG_20250827_150505.jpg">
-<img src="IMG_20250827_150922.jpg">
-<img src="IMG_20250827_151520.jpg">
-<img src="IMG_20250905_170434.jpg">
+<div class="hero">
+  <h2>📢 Admission Open</h2>
+  <p>Class 1 to 10 | CBSE & HSE | All Subjects</p>
 </div>
+
+<section id="about">
+  <div class="card">
+    <h2>About Us</h2>
+    <p>Ama Anusthan is a coaching center dedicated to providing quality education in rural areas. We focus on concept clarity, practical learning, and student success.</p>
+  </div>
 </section>
 
-<section>
-<h2>Contact</h2>
-<p><b>Phone:</b> 7873754239 / 7787821489</p>
-<p><b>Location:</b> Gourishankar Complex, Purunagarh, Jagatsinghpur</p>
+<section id="courses">
+  <div class="card">
+    <h2>Our Courses</h2>
+    <ul>
+      <li>CBSE Class 1 to 10</li>
+      <li>HSE Class 1 to 10</li>
+      <li>All Subjects Coaching</li>
+      <li>Spoken English (All Age Groups)</li>
+      <li>DCA / PGDCA Computer Courses</li>
+    </ul>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="card">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <!-- ADD YOUR IMAGES HERE -->
+      <img src="image1.jpg">
+      <img src="image2.jpg">
+      <img src="image3.jpg">
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="card">
+    <h2>Contact Us</h2>
+    <p>📍 Gourishankar Complex, Purunagarh, Jagatsinghpur</p>
+    <p>📞 7873754239 / 7787821489 (WhatsApp)</p>
+    <p>📧 baradakp.chhotaray@gmail.com</p>
+  </div>
 </section>
 
 <footer>
-<p>© 2026 Ama Anusthan | All Rights Reserved</p>
+  <p>© 2026 Ama Anusthan | All Rights Reserved</p>
 </footer>
+
+<!-- WHATSAPP BUTTON -->
+<a class="whatsapp" href="https://wa.me/917873754239">💬</a>
 
 </body>
 </html>
