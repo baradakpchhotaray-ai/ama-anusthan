@@ -3,159 +3,254 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ama Anusthan</title>
+<title>Ama Anusthan - A Center of Learning</title>
 
 <style>
 body {
-  margin: 0;
-  font-family: Arial;
-  background: #f4f6f9;
+  margin:0;
+  font-family:'Segoe UI',sans-serif;
+  background:#eef2f7;
 }
 
 /* HEADER */
 header {
-  background: #2c3e50;
-  color: white;
-  text-align: center;
-  padding: 20px;
+  background: linear-gradient(45deg,#2c3e50,#1abc9c);
+  color:white;
+  text-align:center;
+  padding:25px;
 }
 
 /* NAV */
 nav {
-  background: #34495e;
-  text-align: center;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  background:#34495e;
 }
+
 nav a {
-  color: white;
-  padding: 12px;
-  display: inline-block;
-  text-decoration: none;
+  color:white;
+  padding:15px;
+  text-decoration:none;
+  font-weight:bold;
 }
-nav a:hover {
-  background: #1abc9c;
-}
+
+nav a:hover { background:#1abc9c; }
 
 /* HERO */
 .hero {
-  background: #1abc9c;
-  color: white;
-  text-align: center;
-  padding: 25px;
+  text-align:center;
+  padding:40px 20px;
+  background:#1abc9c;
+  color:white;
+}
+
+.hero h2 { font-size:28px; }
+
+/* SLIDER */
+.slider { overflow:hidden; height:250px; }
+.slides {
+  display:flex;
+  width:400%;
+  animation:slide 16s infinite;
+}
+.slides img {
+  width:100%;
+  height:250px;
+  object-fit:cover;
+}
+
+@keyframes slide {
+0%{margin-left:0;}
+25%{margin-left:-100%;}
+50%{margin-left:-200%;}
+75%{margin-left:-300%;}
+100%{margin-left:0;}
 }
 
 /* SECTION */
-section {
-  padding: 15px;
+.section {
+  margin:15px;
+  padding:20px;
+  background:white;
+  border-radius:10px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* CARD */
+/* CARDS */
+.cards {
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
+  justify-content:center;
+}
+
 .card {
-  background: white;
-  padding: 15px;
-  margin: 10px 0;
-  border-radius: 10px;
+  background:#fff;
+  padding:15px;
+  width:250px;
+  border-radius:10px;
+  box-shadow:0 0 10px rgba(0,0,0,0.1);
+  text-align:center;
 }
 
-/* GALLERY FIX */
+/* GALLERY */
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.gallery img {
-  width: 100%;
-  max-width: 200px;
-  height: 150px;
-  object-fit: cover;
-  margin: 8px;
-  border-radius: 10px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  justify-content:center;
 }
 
-/* DROPDOWN */
-details {
-  margin: 10px 0;
+.gallery img {
+  width:220px;
+  border-radius:10px;
+  transition:0.3s;
 }
-summary {
-  background: #1c2b39;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
+
+.gallery img:hover {
+  transform:scale(1.1);
+}
+
+/* BUTTON */
+.btn {
+  display:inline-block;
+  background:#27ae60;
+  color:white;
+  padding:12px 25px;
+  border-radius:5px;
+  text-decoration:none;
+  margin-top:10px;
+}
+
+/* FORM */
+form input, form textarea {
+  width:100%;
+  padding:10px;
+  margin:5px 0;
+  border-radius:5px;
+  border:1px solid #ccc;
+}
+
+form button {
+  background:#1abc9c;
+  color:white;
+  border:none;
+  padding:10px;
+  width:100%;
 }
 
 /* FOOTER */
 footer {
-  background: #2c3e50;
-  color: white;
-  text-align: center;
-  padding: 10px;
+  background:#2c3e50;
+  color:white;
+  text-align:center;
+  padding:15px;
 }
 </style>
-
 </head>
 
 <body>
 
 <header>
-  <h1>AMA ANUSTHAN</h1>
-  <p>A Center of Learning</p>
+<h1>📚 Ama Anusthan</h1>
+<p>A Center of Learning</p>
 </header>
 
 <nav>
-  <a href="#about">About</a>
-  <a href="#gallery">Gallery</a>
-  <a href="#contact">Contact</a>
+<a href="#about">About</a>
+<a href="#courses">Courses</a>
+<a href="#results">Results</a>
+<a href="#gallery">Gallery</a>
+<a href="#teachers">Teachers</a>
+<a href="#contact">Contact</a>
 </nav>
 
 <div class="hero">
-  <h2>📢 Admission Open</h2>
-  <p>Class 1 to 10 | CBSE & HSE</p>
+<h2>🎓 Admission Open 2026</h2>
+<p>CBSE & HSE | Class 1–10 | Computer & Spoken English</p>
+<a href="#contact" class="btn">Apply Now</a>
 </div>
 
-<section id="about">
+<!-- SLIDER -->
+<div class="slider">
+<div class="slides">
+<img src="IMG-20250325-WA0018.jpg">
+<img src="IMG-20250518-WA0001.jpg">
+<img src="IMG-20250531-WA0002.jpg">
+<img src="IMG-20250826-WA0002.jpg">
+</div>
+</div>
 
-  <details>
-    <summary>About the Institution</summary>
-    <div class="card">
-      Ama Anusthan is a coaching center dedicated to providing quality education in rural areas with focus on concept clarity and student success.
-    </div>
-  </details>
+<div id="about" class="section">
+<h2>About Us</h2>
+<p>
+Ama Anusthan is a dedicated coaching center in rural Odisha providing quality education.
+We focus on concept clarity, discipline, and individual attention.
+</p>
+</div>
 
-  <details>
-    <summary>Courses Offered</summary>
-    <div class="card">
-      CBSE & HSE Class 1–10<br>
-      All Subjects Coaching<br>
-      Spoken English<br>
-      DCA / PGDCA
-    </div>
-  </details>
+<div id="courses" class="section">
+<h2>Courses</h2>
 
-</section>
+<div class="cards">
+<div class="card">CBSE Class 1–10</div>
+<div class="card">HSE Class 1–10</div>
+<div class="card">DCA & PGDCA</div>
+<div class="card">Spoken English</div>
+</div>
+</div>
 
-<section id="gallery">
+<div id="results" class="section">
+<h2>Our Results</h2>
+<p>🏆 90%+ scorers every year</p>
+<p>📈 Strong academic improvement</p>
+<p>🎯 Individual student focus</p>
+</div>
 
-  <details>
-    <summary>View Gallery</summary>
-    <div class="card gallery">
-      <img src="image1.jpg">
-      <img src="image2.jpg">
-      <img src="image3.jpg">
-    </div>
-  </details>
+<div id="gallery" class="section">
+<h2>Gallery</h2>
 
-</section>
+<div class="gallery">
+<img src="IMG-20251114-WA0022.jpg">
+<img src="IMG_20250517_171410.jpg">
+<img src="IMG_20250609_082642.jpg">
+<img src="IMG_20250827_150505.jpg">
+<img src="IMG_20250827_150922.jpg">
+<img src="IMG_20250827_151520.jpg">
+</div>
+</div>
 
-<section id="contact">
-  <div class="card">
-    📍 Gourishankar Complex, Jagatsinghpur<br>
-    📞 7873754239 / 7787821489<br>
-    📧 baradakp.chhotaray@gmail.com
-  </div>
-</section>
+<div id="teachers" class="section">
+<h2>Our Teachers</h2>
+
+<div class="cards">
+<div class="card">Experienced Faculty</div>
+<div class="card">Subject Experts</div>
+<div class="card">Student Friendly</div>
+<div class="card">Result Oriented</div>
+</div>
+</div>
+
+<div id="contact" class="section">
+<h2>Admission Form</h2>
+
+<form>
+<input type="text" placeholder="Student Name" required>
+<input type="text" placeholder="Class" required>
+<input type="tel" placeholder="Mobile Number" required>
+<textarea placeholder="Message"></textarea>
+<button type="submit">Submit</button>
+</form>
+
+<p>📍 Gourishankar Complex, Jagatsinghpur, Odisha</p>
+<p>📞 7873754239 | 7787821489</p>
+
+<a href="https://wa.me/917787821489" class="btn">WhatsApp Now</a>
+</div>
 
 <footer>
-  © 2026 Ama Anusthan
+<p>© 2026 Ama Anusthan | All Rights Reserved</p>
 </footer>
 
 </body>
