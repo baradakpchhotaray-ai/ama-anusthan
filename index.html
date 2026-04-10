@@ -3,41 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ama Anusthan - A Center of Learning</title>
+<title>Ama Anusthan</title>
 
 <style>
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
+  font-family: Arial;
   background: #f4f6f9;
 }
 
 /* HEADER */
 header {
-  background: linear-gradient(45deg, #1c2b39, #2c3e50);
+  background: #2c3e50;
   color: white;
   text-align: center;
-  padding: 30px 10px;
+  padding: 20px;
 }
 
-/* NAVBAR */
+/* NAV */
 nav {
   background: #34495e;
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 nav a {
   color: white;
-  padding: 14px 20px;
+  padding: 12px;
+  display: inline-block;
   text-decoration: none;
 }
 nav a:hover {
   background: #1abc9c;
-}
-
-/* SECTIONS */
-section {
-  padding: 20px;
 }
 
 /* HERO */
@@ -45,24 +40,47 @@ section {
   background: #1abc9c;
   color: white;
   text-align: center;
-  padding: 40px 20px;
+  padding: 25px;
 }
 
-/* CARDS */
+/* SECTION */
+section {
+  padding: 15px;
+}
+
+/* CARD */
 .card {
   background: white;
-  margin: 15px;
-  padding: 20px;
+  padding: 15px;
+  margin: 10px 0;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* GALLERY */
+/* GALLERY FIX */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .gallery img {
   width: 100%;
-  max-width: 250px;
-  margin: 10px;
+  max-width: 200px;
+  height: 150px;
+  object-fit: cover;
+  margin: 8px;
   border-radius: 10px;
+}
+
+/* DROPDOWN */
+details {
+  margin: 10px 0;
+}
+summary {
+  background: #1c2b39;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 /* FOOTER */
@@ -70,22 +88,10 @@ footer {
   background: #2c3e50;
   color: white;
   text-align: center;
-  padding: 15px;
-}
-
-/* WHATSAPP BUTTON */
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: green;
-  color: white;
-  padding: 15px;
-  border-radius: 50%;
-  font-size: 20px;
-  text-decoration: none;
+  padding: 10px;
 }
 </style>
+
 </head>
 
 <body>
@@ -97,63 +103,60 @@ footer {
 
 <nav>
   <a href="#about">About</a>
-  <a href="#courses">Courses</a>
   <a href="#gallery">Gallery</a>
   <a href="#contact">Contact</a>
 </nav>
 
 <div class="hero">
   <h2>📢 Admission Open</h2>
-  <p>Class 1 to 10 | CBSE & HSE | All Subjects</p>
+  <p>Class 1 to 10 | CBSE & HSE</p>
 </div>
 
 <section id="about">
-  <div class="card">
-    <h2>About Us</h2>
-    <p>Ama Anusthan is a coaching center dedicated to providing quality education in rural areas. We focus on concept clarity, practical learning, and student success.</p>
-  </div>
-</section>
 
-<section id="courses">
-  <div class="card">
-    <h2>Our Courses</h2>
-    <ul>
-      <li>CBSE Class 1 to 10</li>
-      <li>HSE Class 1 to 10</li>
-      <li>All Subjects Coaching</li>
-      <li>Spoken English (All Age Groups)</li>
-      <li>DCA / PGDCA Computer Courses</li>
-    </ul>
-  </div>
+  <details>
+    <summary>About the Institution</summary>
+    <div class="card">
+      Ama Anusthan is a coaching center dedicated to providing quality education in rural areas with focus on concept clarity and student success.
+    </div>
+  </details>
+
+  <details>
+    <summary>Courses Offered</summary>
+    <div class="card">
+      CBSE & HSE Class 1–10<br>
+      All Subjects Coaching<br>
+      Spoken English<br>
+      DCA / PGDCA
+    </div>
+  </details>
+
 </section>
 
 <section id="gallery">
-  <div class="card">
-    <h2>Gallery</h2>
-    <div class="gallery">
-      <!-- ADD YOUR IMAGES HERE -->
+
+  <details>
+    <summary>View Gallery</summary>
+    <div class="card gallery">
       <img src="image1.jpg">
       <img src="image2.jpg">
       <img src="image3.jpg">
     </div>
-  </div>
+  </details>
+
 </section>
 
 <section id="contact">
   <div class="card">
-    <h2>Contact Us</h2>
-    <p>📍 Gourishankar Complex, Purunagarh, Jagatsinghpur</p>
-    <p>📞 7873754239 / 7787821489 (WhatsApp)</p>
-    <p>📧 baradakp.chhotaray@gmail.com</p>
+    📍 Gourishankar Complex, Jagatsinghpur<br>
+    📞 7873754239 / 7787821489<br>
+    📧 baradakp.chhotaray@gmail.com
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Ama Anusthan | All Rights Reserved</p>
+  © 2026 Ama Anusthan
 </footer>
-
-<!-- WHATSAPP BUTTON -->
-<a class="whatsapp" href="https://wa.me/917873754239">💬</a>
 
 </body>
 </html>
