@@ -4,52 +4,67 @@
 <title>Ama Anusthan</title>
 
 <style>
-body {font-family: Arial; margin:0;}
+body {
+  font-family: Arial;
+  margin:0;
+  font-size:18px;
+}
 
 /* Header */
 header {
   background: linear-gradient(to right,#2c3e50,#1abc9c);
   color:white;
   text-align:center;
-  padding:20px;
+  padding:25px;
+}
+header h1 {
+  font-size:40px;
 }
 
 /* Navbar */
 nav {
   background:#34495e;
   text-align:center;
-  padding:10px;
+  padding:15px;
 }
 nav a {
   color:white;
-  margin:10px;
+  margin:15px;
   text-decoration:none;
   font-weight:bold;
+  font-size:18px;
   cursor:pointer;
 }
 
 /* Sections */
-.section {display:none; padding:20px;}
-.active {display:block;}
+.section {
+  display:none;
+  padding:25px;
+  font-size:18px;
+}
+.active {
+  display:block;
+}
 
 /* Slider */
 .slider img {
   width:100%;
-  height:250px;
+  height:260px;
   object-fit:cover;
 }
 
 /* Cards */
 .card {
   background:#f4f4f4;
-  padding:15px;
-  margin:10px 0;
+  padding:20px;
+  margin:15px 0;
   border-radius:10px;
+  font-size:18px;
 }
 
 /* Gallery */
 .gallery img {
-  width:200px;
+  width:220px;
   margin:10px;
   border-radius:10px;
 }
@@ -57,14 +72,16 @@ nav a {
 /* Form */
 input, textarea {
   width:100%;
-  padding:10px;
-  margin:5px 0;
+  padding:12px;
+  margin:8px 0;
+  font-size:16px;
 }
 button {
   background:#1abc9c;
   color:white;
   border:none;
-  padding:10px;
+  padding:12px;
+  font-size:16px;
 }
 
 /* WhatsApp */
@@ -74,9 +91,10 @@ button {
   right:20px;
   background:#25D366;
   color:white;
-  padding:15px;
+  padding:18px;
   border-radius:50%;
   text-decoration:none;
+  font-size:20px;
 }
 
 /* Footer */
@@ -84,7 +102,8 @@ footer {
   text-align:center;
   background:#2c3e50;
   color:white;
-  padding:10px;
+  padding:15px;
+  font-size:16px;
 }
 </style>
 
@@ -118,7 +137,7 @@ window.onload=slide;
 
 <header>
 <h1>Ama Anusthan</h1>
-<p>A Center of Learning | Jagatsinghpur</p>
+<p><b>A Center of Learning | Jagatsinghpur</b></p>
 </header>
 
 <nav>
@@ -192,11 +211,10 @@ window.onload=slide;
 </form>
 </div>
 
-<!-- WhatsApp -->
 <a class="whatsapp" href="https://wa.me/917787821489" target="_blank">💬</a>
 
 <footer>
-<p>© 2026 Ama Anusthan | All Rights Reserved</p>
+<p>© 2026 Ama Anusthan</p>
 </footer>
 
 <script>
