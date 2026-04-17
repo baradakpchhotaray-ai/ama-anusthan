@@ -1,107 +1,220 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Ama Anusthan Coaching Center - CBSE & HSE Classes, Spoken English, Computer Courses in Jagatsinghpur">
-<title>Ama Anusthan | Best Coaching Center</title><style>
-body {font-family: Arial; margin:0; background:#eef2f7;}
-header {background:#2c3e50; color:white; text-align:center; padding:20px;}
-nav {background:#34495e; text-align:center; padding:10px;}
-nav a {color:white; margin:10px; text-decoration:none; font-size:14px;}
-.container {width:90%; max-width:900px; margin:auto; padding:15px;}
-.card {background:white; padding:15px; margin-bottom:15px; border-radius:10px; box-shadow:0 3px 8px rgba(0,0,0,0.1);} 
-input, select, textarea {width:100%; padding:10px; margin:6px 0; border-radius:6px; border:1px solid #ccc;}
-button {width:100%; padding:10px; background:#27ae60; color:white; border:none; border-radius:6px;}
-button:hover {background:#219150;}
-footer {text-align:center; padding:15px; background:#2c3e50; color:white;}
-.dashboard {display:none;}
-.whatsapp {background:#25D366; margin-top:10px; display:block; text-align:center; padding:10px; color:white; text-decoration:none; border-radius:6px;}
-</style></head><body><header>
+<title>Ama Anusthan</title>
+
+<style>
+body {font-family: Arial; margin:0;}
+
+/* Header */
+header {
+  background: linear-gradient(to right,#2c3e50,#1abc9c);
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+
+/* Navbar */
+nav {
+  background:#34495e;
+  text-align:center;
+  padding:10px;
+}
+nav a {
+  color:white;
+  margin:10px;
+  text-decoration:none;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* Sections */
+.section {display:none; padding:20px;}
+.active {display:block;}
+
+/* Slider */
+.slider img {
+  width:100%;
+  height:250px;
+  object-fit:cover;
+}
+
+/* Cards */
+.card {
+  background:#f4f4f4;
+  padding:15px;
+  margin:10px 0;
+  border-radius:10px;
+}
+
+/* Gallery */
+.gallery img {
+  width:200px;
+  margin:10px;
+  border-radius:10px;
+}
+
+/* Form */
+input, textarea {
+  width:100%;
+  padding:10px;
+  margin:5px 0;
+}
+button {
+  background:#1abc9c;
+  color:white;
+  border:none;
+  padding:10px;
+}
+
+/* WhatsApp */
+.whatsapp {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:15px;
+  border-radius:50%;
+  text-decoration:none;
+}
+
+/* Footer */
+footer {
+  text-align:center;
+  background:#2c3e50;
+  color:white;
+  padding:10px;
+}
+</style>
+
+<script>
+function showSection(id){
+  let sec=document.getElementsByClassName("section");
+  for(let i=0;i<sec.length;i++){
+    sec[i].style.display="none";
+  }
+  document.getElementById(id).style.display="block";
+}
+
+/* Slider */
+let i=0;
+function slide(){
+  let imgs=document.getElementsByClassName("slide");
+  for(let j=0;j<imgs.length;j++){
+    imgs[j].style.display="none";
+  }
+  i++;
+  if(i>imgs.length){i=1;}
+  imgs[i-1].style.display="block";
+  setTimeout(slide,2000);
+}
+window.onload=slide;
+</script>
+
+</head>
+
+<body>
+
+<header>
 <h1>Ama Anusthan</h1>
 <p>A Center of Learning | Jagatsinghpur</p>
-</header><nav>
-<a href="#about">About</a>
-<a href="#courses">Courses</a>
-<a href="#admission">Admission</a>
-<a href="#student">Student</a>
-<a href="#login">Login</a>
-</nav><div class="container"><div class="card" id="about">
-<h2>About Us</h2>
-<p>Best coaching center for CBSE & HSE Class 1–10. We provide quality teaching, spoken English, and computer education in a rural area.</p>
-</div><div class="card" id="courses">
-<h2>Courses</h2>
-<ul>
-<li>CBSE & HSE (Class 1–10)</li>
-<li>Computer Courses (DCA, PGDCA)</li>
-<li>Spoken English</li>
-</ul>
-</div><div class="card" id="admission">
-<h2>Admission Form</h2>
-<input id="name" placeholder="Student Name">
-<select id="class">
-<option>Class 1</option><option>Class 2</option><option>Class 3</option>
-<option>Class 4</option><option>Class 5</option><option>Class 6</option>
-<option>Class 7</option><option>Class 8</option><option>Class 9</option>
-<option>Class 10</option>
-</select>
-<input id="mobile" placeholder="Mobile Number">
-<button onclick="submitForm()">Submit</button>
-<a class="whatsapp" href="https://wa.me/917873754239">Chat on WhatsApp</a>
-</div><div class="card" id="student">
-<h2>Student Writing Practice</h2>
-<textarea id="writing" rows="6"></textarea>
-<button onclick="saveWriting()">Save</button>
-</div><div class="card" id="login">
-<h2>Student Login</h2>
-<input id="user" placeholder="Username">
-<input id="pass" type="password" placeholder="Password">
-<button onclick="login()">Login</button>
-</div><div class="card dashboard" id="dashboard">
-<h2>Student Dashboard</h2>
-<button onclick="startTest()">Start Test</button>
-<button onclick="logout()">Logout</button>
-<div id="test" style="display:none;">
-<p>Q: 10 - 2 = ?</p>
-<input id="ans">
-<button onclick="submitTest()">Submit</button>
+</header>
+
+<nav>
+<a onclick="showSection('home')">Home</a>
+<a onclick="showSection('courses')">Courses</a>
+<a onclick="showSection('about')">About</a>
+<a onclick="showSection('gallery')">Gallery</a>
+<a onclick="showSection('contact')">Contact</a>
+</nav>
+
+<!-- HOME -->
+<div id="home" class="section active">
+
+<div class="slider">
+<img class="slide" src="img1.jpg">
+<img class="slide" src="img2.jpg">
+<img class="slide" src="img3.jpg">
 </div>
-</div><div class="card">
-<h2>Location</h2>
-<iframe src="https://maps.google.com/maps?q=Jagatsinghpur%20Odisha&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="200"></iframe>
-</div></div><footer>
-© 2026 Ama Anusthan | Contact: 7873754239
-</footer><script>
-function submitForm(){
-var name = document.getElementById("name").value;
-var mobile = document.getElementById("mobile").value;
-window.open("https://wa.me/917873754239?text=New Admission:%0AName:"+name+"%0AMobile:"+mobile);
-alert("Submitted Successfully");
-}
 
-function saveWriting(){
-localStorage.setItem("writing", document.getElementById("writing").value);
-alert("Saved");
-}
+<h2>Welcome</h2>
+<p>Quality Education for CBSE & HSE students (Class 1–10)</p>
+<p><b>10 Experienced Teachers | 40+ Students</b></p>
 
-window.onload=function(){
-if(localStorage.getItem("writing")){
-document.getElementById("writing").value=localStorage.getItem("writing");
-}
-}
+</div>
 
-function login(){
-if(document.getElementById("pass").value=="1234"){
-document.getElementById("dashboard").style.display="block";
-}else{alert("Wrong Password");}
+<!-- COURSES -->
+<div id="courses" class="section">
+<h2>Our Courses</h2>
+<div class="card">CBSE Class 1–10 (All Subjects)</div>
+<div class="card">HSE Class 1–10 (All Subjects)</div>
+<div class="card">Computer Courses (DCA, PGDCA)</div>
+<div class="card">Spoken English Classes</div>
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="section">
+<h2>About Us</h2>
+<p><b>Proprietor:</b> Barada Prasan Chhotaray</p>
+<p>Ama Anusthan is dedicated to helping rural students succeed with strong fundamentals.</p>
+<p>✔ Experienced Teachers</p>
+<p>✔ Personal Attention</p>
+<p>✔ Excellent Results</p>
+</div>
+
+<!-- GALLERY -->
+<div id="gallery" class="section">
+<h2>Gallery</h2>
+<img src="img1.jpg">
+<img src="img2.jpg">
+<img src="img3.jpg">
+<img src="img4.jpg">
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="section">
+<h2>Contact Us</h2>
+
+<p>📞 7873754239</p>
+<p>📱 7787821489</p>
+<p>📍 Gauri Sankar Complex, Jagatsinghpur</p>
+
+<iframe src="https://maps.google.com/maps?q=Jagatsinghpur&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="250"></iframe>
+
+<h3>Admission Form</h3>
+<form onsubmit="sendToWhatsApp(); return false;">
+<input type="text" id="name" placeholder="Name" required>
+<input type="text" id="class" placeholder="Class" required>
+<input type="tel" id="phone" placeholder="Phone" required>
+<textarea id="msg" placeholder="Message"></textarea>
+<button type="submit">Submit</button>
+</form>
+</div>
+
+<!-- WhatsApp -->
+<a class="whatsapp" href="https://wa.me/917787821489" target="_blank">💬</a>
+
+<footer>
+<p>© 2026 Ama Anusthan | All Rights Reserved</p>
+</footer>
+
+<script>
+function sendToWhatsApp(){
+  let name=document.getElementById('name').value;
+  let cls=document.getElementById('class').value;
+  let phone=document.getElementById('phone').value;
+  let msg=document.getElementById('msg').value;
+
+  let url="https://wa.me/917787821489?text="
+  +"Name: "+name+"%0a"
+  +"Class: "+cls+"%0a"
+  +"Phone: "+phone+"%0a"
+  +"Message: "+msg;
+
+  window.open(url,'_blank');
 }
+</script>
 
-function logout(){document.getElementById("dashboard").style.display="none";}
-
-function startTest(){document.getElementById("test").style.display="block";}
-
-function submitTest(){
-var ans=document.getElementById("ans").value;
-if(ans=="8"){alert("Correct");}else{alert("Wrong");}
-}
-</script></body>
+</body>
 </html>
